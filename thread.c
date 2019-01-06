@@ -109,7 +109,7 @@ int main ( int argc, char *argv[] )
                                 aa[x-1].wordnum = wn_int;
                                 strcpy(aa[x-1].median_word, mw);
                 }
-                pthread_exit(NULL);
+                
         }
 	 int fileNum = (argc - 1);
         //printf("\nPrint simple array\n");
@@ -122,6 +122,8 @@ int main ( int argc, char *argv[] )
         reverseAnswerArray(aa, (fileNum - 1));
         //printf("\nPrint reversed array\n");
         printAnswerArray(aa, fileNum);
+
+        pthread_exit(NULL);
 }
 
 // The function to be executed by all threads
